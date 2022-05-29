@@ -15,8 +15,12 @@ import model.Laboratorio;
 public class Principal {
 
 	public static void main(String args[]) throws IOException {
-		String caminhoArquivo = "C:\\Users\\josue\\Downloads\\teste.xlsm";
-		FileInputStream fis = new FileInputStream(new File(caminhoArquivo));
+		
+		///String caminhoArquivo = "C:\\Users\\josue\\Downloads\\";
+		String caminhoArquivo = "";
+		String nomeDoArquivo = "teste.xlsm";
+		
+		FileInputStream fis = new FileInputStream(new File(caminhoArquivo + nomeDoArquivo));
 
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 		XSSFSheet folhaExcel = wb.getSheetAt(0);
